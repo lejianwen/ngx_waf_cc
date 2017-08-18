@@ -8,11 +8,11 @@ nginx的cc防火墙，基于lua-nginx-module(openresty) , 根据loveshell/ngx_lu
 ## 配置
 在nginx.conf的http段添加
 ~~~nginx
-    #/data/docs/lua/ngx_waf_cc 是解压后的目录,根据情况自行替换
-	lua_package_path "/data/docs/lua/ngx_waf_cc/?.lua;;";
-    lua_shared_dict limit 10m;
-    init_by_lua_file  /data/docs/lua/ngx_waf_cc/init.lua; 
-	access_by_lua_file /data/docs/lua/ngx_waf_cc/waf_cc.lua;  #可以写到server段中
+#/data/docs/lua/ngx_waf_cc 是解压后的目录,根据情况自行替换
+lua_package_path "/data/docs/lua/ngx_waf_cc/?.lua;;";
+lua_shared_dict limit 10m;
+init_by_lua_file  /data/docs/lua/ngx_waf_cc/init.lua; 
+access_by_lua_file /data/docs/lua/ngx_waf_cc/waf_cc.lua;  #可以写到server段中
 ~~~
 ### 配置文件说明
 ~~~lua
