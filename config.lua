@@ -1,9 +1,9 @@
 logpath = "/data/logs/nginx/waf_cc/"
 attacklog = true --攻击日志是否开启
-ipWhitelist={"127.0.0.1","10.7.20.73"} -- ip白名单
-ipBlocklist={"10.7.20.73"}	--	ip黑名单
+ipWhitelist={"127.0.0.1","192.168.1.1"} -- ip白名单
+ipBlocklist={"10.0.0.1"}	--	ip黑名单
 CCDeny=true	-- 是否开启 on || off
-CCrate="1000/60" -- CC攻击频率   次数/时间 , 100/60 表示60s内100次
+CCrate="100/60" -- CC攻击频率   次数/时间 , 100/60 表示60s内100次
 html = [[
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
